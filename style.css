@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Noto+Serif+TC:wght@700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: darkcyan;
+}
+
+.base {
+    position: relative;
+
+    display: block;
+    margin: 0 auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 300px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+h1 {
+    font: 20px/1.7 "Noto Sans TC";
+    letter-spacing: 2px;
+    text-align: center;
+    color: darkcyan;
+}
+
+#choceLocation {
+    display: block;
+    margin-bottom: 30px;
+    width: 100%;
+    font: 300 17px/1.7 "Noto Sans TC";
+    letter-spacing: 2px;
+    text-align: center;
+    background: #eee;
+    border: none;
+    border-radius: 99em;
+}
+
+#boardLocaltion {
+    font: 25px/1.7 "Noto Sans TC";
+    letter-spacing: 2px;
+    text-align: center;
+    color: darkgrey;
+}
+
+#boardWeatherImg {
+    display: block;
+    margin: 0 auto;
+}
+
+#boardWeatherState {
+    font: 30px/1.7 "Noto Sans TC";
+    letter-spacing: 2px;
+    text-align: center;
+    color: black;
+
+
+    color: rgba(255, 255, 255, 0.9);
+}
+
+
+
+
+#boardWeatherDetail {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 20px;
+    background: #eee;
+    border-radius: 10px;
+    font: 100 15px/1.7 "Noto Sans TC";
+
+}
+
+
+
+#loading {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font: 100 30px/1.7 "Noto Sans TC";
+    letter-spacing: 4px;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+#loading.on {
+    display: flex;
+}
+
+#loading ul {
+    position: absolute;
+    top: 55%;
+    left: calc(50% - 25px);
+    width: 50px;
+    height: 50px;
+    list-style: none;
+}
+
+#loading ul li {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 99em;
+    animation: rotation 0.8s linear infinite alternate;
+}
+
+@keyframes rotation {
+    from {
+        transform: scale(0.1);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
